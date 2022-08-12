@@ -29,8 +29,8 @@ public class ApplicationProperties {
 
                     //Selenium grid settings
                     setProperty(ApplicationProperty.REMOTE_DRIVER.value, "true");
-                    setProperty(ApplicationProperty.SELENIUM_GRID_URL.value, "http://host.docker.internal:4444");
-                    //  setProperty(ApplicationProperty.SELENIUM_GRID_URL.value, "http://localhost:4444");
+                  //  setProperty(ApplicationProperty.SELENIUM_GRID_URL.value, "http://host.docker.internal:4444");
+                      setProperty(ApplicationProperty.SELENIUM_GRID_URL.value, "http://localhost:4444");
 
                     setProperty(ApplicationProperty.DESIRED_BROWSER_VERSION.value, "");
                     setProperty(ApplicationProperty.DESIRED_PLATFORM.value, "");
