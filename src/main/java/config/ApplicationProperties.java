@@ -18,7 +18,7 @@ public class ApplicationProperties {
                     setProperty(ApplicationProperty.WAIT_TIMEOUT.value, "15");
                     setProperty(ApplicationProperty.WAIT_TIMEOUT_LNG.value, "30");
 
-                    setProperty(ApplicationProperty.TARGET_BROWSER.value, "CHROME"); // CHROME, FIREFOX
+                    setProperty(ApplicationProperty.TARGET_BROWSER.value, "FIREFOX"); // CHROME, FIREFOX
 
                     //application URL's
                     setProperty(ApplicationProperty.DOWNLOAD_FOLDER.value, "");
@@ -28,7 +28,7 @@ public class ApplicationProperties {
 
 
                     //Selenium grid settings
-                    setProperty(ApplicationProperty.REMOTE_DRIVER.value, "false");
+                    setProperty(ApplicationProperty.REMOTE_DRIVER.value, "true");
                     setProperty(ApplicationProperty.SELENIUM_GRID_URL.value, "http://localhost:4444");
 
                     setProperty(ApplicationProperty.DESIRED_BROWSER_VERSION.value, "");
