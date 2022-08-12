@@ -142,6 +142,7 @@ public enum DriverType implements DriverSetup {
 
     protected String getDriverPath(String driverFileName) {
         driverFileName = OsUtils.isWindows() ? driverFileName + ".exe" : driverFileName;
+        System.out.println(getClass().getClassLoader().getResource("drivers/" + driverFileName).getPath());
         return getClass().getClassLoader().getResource("drivers/" + driverFileName).getPath();
     }
 }
