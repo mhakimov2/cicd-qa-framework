@@ -36,7 +36,7 @@ public class TestContext {
     protected WebDriver driver;
     protected DataProvider data;
 
-    private static final Logger logger = LoggerFactory.getLogger(LoginModel.class);
+    private static final Logger logger = LoggerFactory.getLogger(HomePageModel.class);
 
 
     @BeforeAll
@@ -74,22 +74,6 @@ public class TestContext {
     public HomePageModel openApp() throws InterruptedException {
         navigateToPage(ApplicationProperties.getString(APP_URL));
         return new HomePageModel();
-    }
-
-    public LoginModel openApp2() throws InterruptedException {
-        navigateToPage(ApplicationProperties.getString(APP_URL));
-        return new LoginModel();
-    }
-
-    public void deleteListener() {
-        try {
-            new MainModel().navigateToListenersPage();
-            click(LNK_LISTENER.get("1"));
-            click(BTN_DELETE_LISTENER.get());
-        } catch (Exception e) {
-            logger.info("No listeners to delete");
-        }
-
     }
 
 

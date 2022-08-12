@@ -11,7 +11,5 @@ public class Feature1Test extends TestContext {
     @Test
     void verifyConnectionBetweenGruntAndCovenant() throws  InterruptedException {
         openApp().verifyTextIsInLowerCase();
-
-
     }
 }
