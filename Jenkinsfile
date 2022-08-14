@@ -11,11 +11,6 @@ pipeline {
     stage("build") {
       steps {
         echo 'building the app...'
-             sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-                    echo "JAVA_HOME = ${JAVA_HOME}"
-                '''
              sh 'mvn clean package -DskipTests'
       }
     }
@@ -23,7 +18,7 @@ pipeline {
     stage("test") {
       steps {
         echo 'testing the app...'
-        sh 'mvn test'
+        sh 'mvn -Dtest=FeatureXYZTest test'
       }
     }
     

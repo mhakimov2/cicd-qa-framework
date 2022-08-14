@@ -18,9 +18,6 @@ import static config.ApplicationProperties.getBoolean;
 import static config.ApplicationProperties.getString;
 import static support.web.WebElementHelper.click;
 import static support.web.WebElementHelper.navigateToPage;
-import static ui.components.locators.Locators.ListenersPage.LNK_LISTENER;
-import static ui.components.locators.Locators.MainPage.BTN_DELETE_LISTENER;
-
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,9 +43,6 @@ public class TestContext {
 
     @BeforeEach
     public void setUp(TestInfo testInfo) throws IOException {
-//        Runtime.getRuntime().exec(String.format("docker run -t -p 7443:7443 -p 80:80 -p 443:443 --net=selenoid --name covenant -v" +
-//                        " %s:/app/Data covenant --username AdminUser --computername 0.0.0.0 --password %s",
-//                getString(PATH_TO_COVENANT_DATA), getString(HOST_MACHINE_PASSWORD)));
         driver = DriverBase.getDriver();
         setupTestData(testInfo);
     }

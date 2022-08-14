@@ -23,14 +23,15 @@ public class ApplicationProperties {
                     //application URL's
                     setProperty(ApplicationProperty.DOWNLOAD_FOLDER.value, "");
 
-                  //  setProperty(ApplicationProperty.APP_URL.value, "https://172.18.0.4:7443");
-                    setProperty(ApplicationProperty.APP_URL.value, "http://localhost:8081/pipeline2");
+                    //  setProperty(ApplicationProperty.APP_URL.value, "https://172.18.0.4:7443");
+                    //  setProperty(ApplicationProperty.APP_URL.value, "http://localhost:8081/feat-xyz");
+                    setProperty(ApplicationProperty.APP_URL.value, "http://host.docker.internal:8081/feat-xyz");
 
 
                     //Selenium grid settings
                     setProperty(ApplicationProperty.REMOTE_DRIVER.value, "true");
-                    setProperty(ApplicationProperty.SELENIUM_GRID_URL.value, "http://host.docker.internal:4444");
-                  //    setProperty(ApplicationProperty.SELENIUM_GRID_URL.value, "http://localhost:4444");
+                    // setProperty(ApplicationProperty.SELENIUM_GRID_URL.value, "http://host.docker.internal:4444");
+                    setProperty(ApplicationProperty.SELENIUM_GRID_URL.value, "http://localhost:4444");
 
                     setProperty(ApplicationProperty.DESIRED_BROWSER_VERSION.value, "");
                     setProperty(ApplicationProperty.DESIRED_PLATFORM.value, "");
@@ -44,9 +45,37 @@ public class ApplicationProperties {
 
                 }
             });
-            put("feature", new Properties() {
+            put("remote", new Properties() {
                 {
-                    setProperty(ApplicationProperty.APP_URL.value, "http://localhost:8081");
+                    //timeout and wait time properties
+                    setProperty(ApplicationProperty.WAIT_TIMEOUT_SHT.value, "20");
+                    setProperty(ApplicationProperty.WAIT_TIMEOUT.value, "15");
+                    setProperty(ApplicationProperty.WAIT_TIMEOUT_LNG.value, "30");
+
+                    setProperty(ApplicationProperty.TARGET_BROWSER.value, "FIREFOX"); // CHROME, FIREFOX
+
+                    //application URL's
+                    setProperty(ApplicationProperty.DOWNLOAD_FOLDER.value, "");
+
+                    //  setProperty(ApplicationProperty.APP_URL.value, "http://localhost:8081/feat-xyz");
+                    setProperty(ApplicationProperty.APP_URL.value, "http://host.docker.internal:8081/feat-xyz");
+
+
+                    //Selenium grid settings
+                    setProperty(ApplicationProperty.REMOTE_DRIVER.value, "true");
+                    setProperty(ApplicationProperty.SELENIUM_GRID_URL.value, "http://host.docker.internal:4444");
+                    // setProperty(ApplicationProperty.SELENIUM_GRID_URL.value, "http://localhost:4444");
+
+                    setProperty(ApplicationProperty.DESIRED_BROWSER_VERSION.value, "");
+                    setProperty(ApplicationProperty.DESIRED_PLATFORM.value, "");
+                    setProperty(ApplicationProperty.ENABLE_VIDEO.value, "true");
+
+                    //Proxy settings
+                    setProperty(ApplicationProperty.BROWSER_PROXY_ENABLED.value, "false");
+                    setProperty(ApplicationProperty.PROXY_HOST.value, "10.23.2.250");
+                    setProperty(ApplicationProperty.PROXY_PORT.value, "8080");
+
+
                 }
             });
             put("local", new Properties() {
