@@ -66,8 +66,7 @@ public class TestContext {
     }
 
     public HomePageModel openApp() throws InterruptedException {
-      //  navigateToPage(ApplicationProperties.getString(APP_URL));
-        navigateToPage("http://host.docker.internal:8081/pipeline2");
+        navigateToPage(ApplicationProperties.getString(APP_URL));
         return new HomePageModel();
     }
 
